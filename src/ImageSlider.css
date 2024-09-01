@@ -1,0 +1,72 @@
+.sliderContainer {
+    position: relative;
+    height: 100%;
+    overflow: hidden; /* Ensure overflow is hidden for better display */
+  }
+  
+  .slide {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease; /* Smooth transition */
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+    color: #0000FF;
+  }
+  
+  .arrowRight {
+    right: 22px;
+  }
+  
+  .arrowLeft {
+    left: 22px;
+  }
+  
+  .dotsContainer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+  }
+  
+  .dot {
+    margin: 0 3px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #CCCCCC;
+  }
+  
+  .dotActive {
+    color: #0000FF;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .arrow {
+      font-size: 1.8rem;
+    }
+  
+    .dot {
+      font-size: 16px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .arrow {
+      font-size: 1.5rem;
+    }
+  
+    .dot {
+      font-size: 14px;
+    }
+  }
+  

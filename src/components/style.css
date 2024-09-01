@@ -1,0 +1,98 @@
+
+  .pricing-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem; /* Adds spacing between the cards */
+    padding: 1rem; /* Adds padding inside the container */
+  }
+  
+  /* Basic Card Styling */
+  .card {
+    background: #fff; /* Background color for the card */
+    border: 1px solid #ddd; /* Border color for the card */
+    border-radius: 8px; /* Rounded corners for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect for the card */
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    flex: 1 1 200px; /* Ensures cards grow/shrink with the container size */
+  }
+  
+  /* Hover Effect for Cards */
+  .card:hover {
+    transform: scale(1.15); /* Scales the card up by 5% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increases the shadow effect */
+    z-index: 2; /* Ensures the hovered card appears above others */
+  }
+  
+  /* Pricing Details */
+  .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .get-started-btn {
+    background-color: #007bff; /* Button background color */
+    border: none; /* Removes border */
+    border-radius: 5px; /* Rounded corners for the button */
+    color: #fff; /* Button text color */
+    cursor: pointer; /* Changes cursor to pointer */
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem; /* Adds padding */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  .get-started-btn:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+  }
+  
+  .popular-tag {
+    background-color: #ffeb3b; /* Background color for the tag */
+    border-radius: 15px; /* Rounded corners for the tag */
+    color: #000; /* Tag text color */
+    display: inline-block;
+    font-size: 0.875rem;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem; /* Adds padding */
+  }
+
+  @media screen and (max-width: 768px) {
+    .pricing-cards {
+      flex-direction: column;
+      padding: 0.5rem;
+      gap: 1rem;
+    }
+  
+    .card {
+      padding: 1.5rem;
+      flex: 1 1 100%; /* Full width on mobile */
+      margin-bottom: 1rem;
+    }
+  
+    .price {
+      font-size: 1.25rem;
+    }
+  
+    .description {
+      font-size: 0.9rem;
+    }
+  
+    .get-started-btn {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+    }
+  
+    .popular-tag {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.75rem;
+    }
+  }
+  

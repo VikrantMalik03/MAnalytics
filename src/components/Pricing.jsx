@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Footer from './Footer';
 import Header from './Header';
+import './style.css'; // Adjust the path as needed
 
 const Pricing = () => {
     const [activeIndex, setActiveIndex] = useState(null);

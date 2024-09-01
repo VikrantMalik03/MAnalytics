@@ -12,12 +12,12 @@ const Contact = () => {
             <section>
                 <div className='contact-page'>
                     <div>
-                        <img src="/logo1.avif" alt="" />
+                        <img src="/signup.gif" alt="" />
                     </div>
                     <div className='form'>
                         <div className='gen-info'>
                             <div className='gen-heading'>
-                                <h3>Contact Us</h3>
+                                <h3>Contact Us to Sign Up to Get Started</h3>
                             </div>
                             <div className='gen-para'>
                                 <p>Explore the future with <br /> Feel free to get in touch.</p>

@@ -4,10 +4,15 @@ import Home from './components/Home';
 import Pricing from './components/Pricing';
 import About_Us from './components/About_Us';
 import Contact from './components/Contact';
+import ImageSlider from '../src/ImageSlider';
 
 function App() {
+  
+
   return (
+    
     <Router>
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pricing" element={<Pricing />} />

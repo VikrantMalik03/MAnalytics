@@ -11,7 +11,7 @@ const About_Us = () => {
         <div className="about-us-container">
           <h1>About us</h1>
           <p>
-            We offer revolutionary solutions to industry problems. <br />Join Lando community and experience the benefits of company <br />optimization today!
+          Discover how M3 Analytics can enhance your civil site efficiency with cutting-edge solutions. Join our community today and unlock the full potential of optimized operations!
           </p>
           <div className="about-us-icons">
             <div className="icon-container">
@@ -60,88 +60,9 @@ const About_Us = () => {
       </section>
 
 
-      {/* <section>
-        <div className="team">
-          <h1>Team</h1>
-          <p>Meet the people behind our magical product</p>
-        </div>
+     
 
-        <div className="members">
-          <div className="member">
-            <img src="/dp.jpeg" alt="Harshika" />
-            <h1>CEO</h1>
-            <h3>Harshika</h3>
-          </div>
-
-          <div className="member">
-            <img src="/dp.jpeg" alt="Harshika" />
-            <h1>CEO</h1>
-            <h3>Harshika</h3>
-          </div>
-
-          <div className="member">
-            <img src="/dp.jpeg" alt="Harshika" />
-            <h1>CEO</h1>
-            <h3>Harshika</h3>
-          </div>
-
-          <div className="member">
-            <img src="/dp.jpeg" alt="Harshika" />
-            <h1>CEO</h1>
-            <h3>Harshika</h3>
-          </div>
-
-
-          <div className="spacer"></div>
-
-          <div className="member">
-            <img src="/dp.jpeg" alt="Harshika" />
-            <h1>CEO</h1>
-            <h3>Harshika</h3>
-          </div>
-
-          <div className="member">
-            <img src="/dp.jpeg" alt="Harshika" />
-            <h1>CEO</h1>
-            <h3>Harshika</h3>
-          </div>
-
-          <div className="member">
-            <img src="/dp.jpeg" alt="Harshika" />
-            <h1>CEO</h1>
-            <h3>Harshika</h3>
-          </div>
-
-          <div className="member">
-            <img src="/dp.jpeg" alt="Harshika" />
-            <h1>CEO</h1>
-            <h3>Harshika</h3>
-          </div>
-        </div>
-      </section> */}
-
-
-      <section className='about_section'>
-      <div className="home-2card">
-          <div className="card-wrapper">
-            <div className="box1">
-              <div className="box-container">
-                <div>
-                  <h2>Get Started With<br /> M3 Analytics</h2>
-                  <p>Join our community and experience <br /> the benefits today!</p>
-                  <div className="main-input">
-                    <button>Sign Up Now</button>
-                  </div>
-                </div>
-                <div>
-                  <img className="image2" src="./image 2.avif" alt="Example Image" />
-                </div>
-              </div>
-            </div>
-            <div className="shadow-card"></div>
-          </div>
-        </div>
-      </section>
+      
 
       <Footer/>
 

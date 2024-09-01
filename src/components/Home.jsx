@@ -1,77 +1,111 @@
-import React, { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css/bundle';
-import 'swiper/css'
+import React from 'react';
+import Typewriter from 'typewriter-effect';
 import Footer from './Footer';
 import Header from './Header';
+import ImageSlider from '../ImageSlider';
+
 
 
 
 
 const Home = () => {
 
-    // const [isNavOpen, setIsNavOpen] = useState(false);
+    const slides = [
+        { url: "/dash1.png", title: "beach" },
+        { url: "/dash2.png", title: "beach" },
+        { url: "/dash3.png", title: "beach" },
+        
 
-    // const toggleNav = () => {
-    //     setIsNavOpen(!isNavOpen);
-    // };
+    ];
+    const containerStyles = {
+        width: "58.5rem",
+        height: "26rem",
+        margin: "0 auto",
+        padding: "20px",
+        boxSizing: "border-box",
+        overflow: "hidden",
+        position: "relative",
+    };
 
+
+    const vendors = [
+        { url: "/vebb.png", title: "beach" },
+        { url: "/xx.png", title: "beach" },
+
+
+    ];
+    const containerstyy = {
+        width: "58.5rem",
+        height: "26rem",
+        margin: "0 auto",
+        padding: "20px",
+        boxSizing: "border-box",
+        overflow: "hidden",
+        position: "relative",
+    };
+
+    const getResponsiveStyles = () => {
+        const screenWidth = window.innerWidth;
     
-    // const reviews = [
-    //     {
-    //         name: 'Siddharth Singhal',
-    //         description: 'Love your health app! It keeps me on track with meds and health tips. So handy!',
-    //     },
-    //     {
-    //         name: 'Mohit Kumar',
-    //         description: 'Teaching made easy! Your education app engages students and simplifies my job.',
-    //     },
-    //     {
-    //         name: 'Rakshit Sharma',
-    //         description: 'Your doctor web app rocks! It helps me manage appointments and patient info hassle-free.',
-    //     },
-    //     {
-    //         name: 'Radhika Singh',
-    //         description: 'Your health app is a lifesaver! It reminds me of important health tasks and provides valuable insights for a healthier lifestyle.',
-    //     },
-    //     {
-    //         name: 'Ishan Thakur',
-    //         description: 'The education app is a game-changer! It\'s user-friendly and enhances learning for students of all ages.',
-    //     },
-    // ];
+        if (screenWidth <= 768) { // Tablet and below
+            return {
+                width: "90%", // Adjust the width to be responsive
+                height: "20rem", // Adjust height for smaller screens
+                padding: "10px",
+            };
+        } else if (screenWidth <= 480) { // Mobile devices
+            return {
+                width: "95%", // Full width for very small screens
+                height: "18rem", // Further reduce height
+                padding: "5px",
+            };
+        } else { // Default desktop styles
+            return {
+                width: "58.5rem",
+                height: "26rem",
+                padding: "20px",
+            };
+        }
+    };
+
+
+
     return (
         <>
-            <Header/>
+            <Header />
             <main>
                 <section>
                     <div className="home-main">
                         <div className="home-left">
-                            <div>-FREE 30 DAYS TRIAL
-                                <p className="info">M3 BOOK</p>
-                            </div>
-                            <div>M3 BOOK handles the three most important aspects of a civil site <br />i.e. materials, <br />measurement and <br /> management.</div>
-                            <div className="main-input">
-                                <button>Try for free</button>
-                                <button>See how it works</button>
-                            </div>
+                            <p  className="info">
+                            M3 Analytics: Empowering Civil Site Efficiency through Seamless Integration of
+                                <div>
+                                    <Typewriter
+                                        options={{
+                                            strings: ['Materials', 'Measurement', 'Man-Power'],
+                                            autoStart: true,
+                                            loop: true,
+                                            cursor: '|',
+                                            cursorClassName: 'custom-cursor', // Custom cursor class
+                                            delay: 100,
+                                            deleteSpeed: 50,
+                                        }}
+                                    />
+                                </div>
+                            </p>
                         </div>
-                        <div >
-                            <img className="image" src="/logo1.avif" alt="img" />
-
+                        <div>
+                            <img className="gif" src="/suu.gif" alt="img" />
                         </div>
                     </div>
-
                     <div className="home-down">
                         <p>Trusted by Individuals and teams at the World's best Companies.</p>
-                        <div className='logos' >
+                        <div className='logos'>
                             <img className="logo" src="./logo.svg" alt="Digital Fortress" />
                             <img className="logo" src="./ref_logo.png" alt="velvizi" />
                         </div>
-
                     </div>
                 </section>
-
                 <section>
                     <div className="home-2card">
                         <div className="card-wrapper">
@@ -85,7 +119,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div>
-                                        <img className="image2" src="./image 2.avif" alt="Example Image" />
+                                        <img className="image2" src="/allu.png" alt="Example Image" />
                                     </div>
                                 </div>
                             </div>
@@ -94,51 +128,46 @@ const Home = () => {
                     </div>
                 </section>
 
-                <section>
                     <div className="home3">
                         <div >
-                            <img className="image3" src="./image3.jpg" alt="colour" />
+                            <img className="image3" src="/hero.png" alt="colour" />
                         </div>
                         <div className="div-container">
-                            <div>SMART SAVE</div>
-                            <div>
-                                <h2>ALL YOUR WORK IS SAFE WITH US </h2>
+                            <div className='info1'>
+                                <h2>Revolutionzie your civil Engineering Data Managment </h2>
                             </div>
-                            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> In laboriosam distinctio qui ducimus amet! <br /> Maiores officiis ad porro amet est?</div>
+                            <div className='info2'>Stream line your project with our cutting edge web&app solutions<br /> with integrated progress tracking at all levels.</div>
                             <div className="main-input">
                                 <button>Try Now</button>
                             </div>
 
                         </div>
                     </div>
-                </section>
-
-                <section>
-                    <div className="home3">
+                                        
+                    <div className="home-vendor">
                         <div className="div-container2">
                             {/* <div>COST SAVER</div> */}
-                            <div>
+                            <div className='home3-left'>
                                 <h2>Vendors</h2>
-                            </div>
-                            <div>Vendors  are categorised as purchase-only , labour-only contractors or combined labour and material contractors, with task trackin implemented for contractor workers.</div>
-                            <div className="main-input">
-                                <button>Try Now</button>
+
+                                <p>Vendors  are categorised as purchase-only , labour-only contractors or combined labour and material contractors, with task trackin implemented for contractor workers.</p>
+                                
                             </div>
 
                         </div>
-                        <div >
-                            <img className="image4" src="./image3.jpg" alt="colour" />
+                        <div className='Vendorslides'>
+                            <div style={containerstyy}>
+                                <ImageSlider slides={vendors} />
+                            </div>
                         </div>
                     </div>
-                </section>
 
-                <section>
                     <div className="home-2card">
                         <div className="card-wrapper">
                             <div className="box1">
                                 <div className="box-container">
                                     <div>
-                                        <img className="image2" src="./image 2.avif" alt="Example Image" />
+                                        <img className="image2" src="./bhai.png" alt="Example Image" />
                                     </div>
                                     <div>
                                         <h2>Introducing <br /> Expense Track</h2>
@@ -152,86 +181,34 @@ const Home = () => {
                             <div className="shadow-card"></div>
                         </div>
                     </div>
-                </section>
+                    <div className="home3">
+                        <div className="div-container2">
+                           
+                            <div className='home4-left'>
+                            <h2>Get Started With M3 Analytics  Dashboard</h2>
 
-                {/* <section>
-                    <div className="review-main-container">
-                        <div className="review-first">
-                            <div className="review-main-text">
-                                <h3>REVIEWS</h3>
-                                <h5>Our Precious <br /> Customers' Reviews</h5>
-                                <p>Our customers speaking about the value they uncovered with <br /> Indominus Labs...</p>
-                            </div>
-                            <div className="review-btn">
-
-                                <button className="learn-more-btn review-btn-two">Request Demo</button>
-
-                            </div>
-                        </div>
-                        <div className="review-second">
-                            <Swiper
-                                modules={[Navigation, Pagination]}
-                                spaceBetween={30}
-                                slidesPerView={1}
-                                navigation
-                                pagination={{ clickable: true }}
-                                className="review-swiper"
-                            >
-                                {reviews.map((review, index) => (
-                                    <SwiperSlide key={index} className="review-swiper-slide">
-                                        <div className="review-card">
-                                            <div className="image-content">
-                                                <span className="overlay"></span>
-                                                <div className="review-stars">
-                                                    <i className="fa-solid fa-star" style={{ color: '#ffff00' }}></i>
-                                                    <i className="fa-solid fa-star" style={{ color: '#ffff00' }}></i>
-                                                    <i className="fa-solid fa-star" style={{ color: '#ffff00' }}></i>
-                                                    <i className="fa-solid fa-star" style={{ color: '#ffff00' }}></i>
-                                                    <i className="fa-solid fa-star" style={{ color: '#ffff00' }}></i>
-                                                </div>
-                                            </div>
-                                            <div className="card-content">
-                                                <h2 className="name">{review.name}</h2>
-                                                <p className="description">{review.description}</p>
-                                            </div>
-                                        </div>
-                                    </SwiperSlide>
-                                ))}
-                            </Swiper>
-                        </div>
-                    </div>
-                </section> */}
-
-
-                <section>
-
-
-                    <div className="home-2card">
-                        <div className="card-wrapper">
-                            <div className="box1">
-                                <div className="box-container">
-                                    <div>
-                                        <h2>Get Started With<br /> M3 Analytics  Dashboard</h2>
-                                        <p>A comprehensive sites dashboard provides an organizational overview, displaying monthly expense reports and task progress for each site under management.</p>
-                                        <div className="main-input">
-                                            <button>Sign Up Now</button>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <img className="image2" src="./image 2.avif" alt="Example Image" />
-                                    </div>
+                            <p>A comprehensive sites dashboard provides an organizational <br /> overview, displaying monthly expense reports and task progress for each site under management.</p>
+                                <div className="main-input">
+                                <button>Sign Up Now</button>
                                 </div>
+
                             </div>
-                            <div className="shadow-card"></div>
+
+                        </div>
+                        <div className='Vendorslides'>
+                        <div style={containerStyles}>
+                                            <ImageSlider slides={slides} />
+                                        </div>
                         </div>
                     </div>
-                </section>
+
+                
             </main>
 
-           
 
 
-            <Footer/>
+
+            <Footer />
 
 
 
@@ -244,3 +221,4 @@ const Home = () => {
 };
 
 export default Home;
+

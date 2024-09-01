@@ -11,7 +11,10 @@ const Header = () => {
     return (
         <header>
             <nav className="navbar">
-                <h1>M3 Analytics</h1>
+                <div className="logo-div">
+                    <img className='logo-img' src="/m3logo.png" alt="" />
+                    <h1>M3 Analytics</h1>
+                </div>
                 <div className={`hamburger ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
                     <span></span>
                     <span></span>
