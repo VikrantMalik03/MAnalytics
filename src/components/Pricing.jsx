@@ -2,8 +2,17 @@ import React, { useState } from 'react';
 import Footer from './Footer';
 import Header from './Header';
 import './style.css'; // Adjust the path as needed
+import { Link } from 'react-router-dom';
 
 const Pricing = () => {
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+
     const [activeIndex, setActiveIndex] = useState(null);
 
     const toggleAnswer = (index) => {
@@ -160,11 +169,11 @@ const Pricing = () => {
                                     <h2>Get Started With<br /> M3 Analytics</h2>
                                     <p>Join our community and experience <br /> the benefits today!</p>
                                     <div className="main-input">
-                                        <button>Sign Up Now</button>
+                                    <Link to="/contact" onClick={toggleMenu}><button>Sign Up Now</button></Link>
                                     </div>
                                 </div>
                                 <div>
-                                    <img className="image2" src="./image 2.avif" alt="Example Image" />
+                                    <img className="image2" src="/finnn.png" alt="Example Image" />
                                 </div>
                             </div>
                         </div>

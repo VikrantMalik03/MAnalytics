@@ -220,8 +220,8 @@ a {
 
 .image2 {
   /* max-width: 100%; */
-  width: 70%;
-  height: auto;
+  width: 25rem;
+  height:18rem ;
   border-radius: 2rem;
   margin-left: 5rem;
 }

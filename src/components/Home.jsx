@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import Footer from './Footer';
 import Header from './Header';
 import ImageSlider from '../ImageSlider';
+import { Link } from 'react-router-dom';
 
 
 
@@ -68,6 +69,12 @@ const Home = () => {
         }
     };
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
 
 
     return (
@@ -115,7 +122,7 @@ const Home = () => {
                                         <h2>Purchase Order System</h2>
                                         <p>A real-time purchase order system allows for colloborative input, tracking deliveries, and managing payments, with automatic status updates based on delivery quantities.</p>
                                         <div className="main-input">
-                                            <button>Try for free</button>
+                                            <Link to="/pricing" onClick={toggleMenu}><button>Try for free</button></Link>
                                         </div>
                                     </div>
                                     <div>
@@ -138,7 +145,7 @@ const Home = () => {
                             </div>
                             <div className='info2'>Stream line your project with our cutting edge web&app solutions<br /> with integrated progress tracking at all levels.</div>
                             <div className="main-input">
-                                <button>Try Now</button>
+                            <Link to="/pricing" onClick={toggleMenu}><button>Try Now</button></Link>
                             </div>
 
                         </div>
@@ -173,7 +180,7 @@ const Home = () => {
                                         <h2>Introducing <br /> Expense Track</h2>
                                         <p>An expense page tracks non-PO site costs, categorizing them as labor vendor, in-house, and purchase/rent expenses, with weekly in-house expense reports available.</p>
                                         <div className="main-input">
-                                            <button>Try for free</button>
+                                        <Link to="/pricing" onClick={toggleMenu}><button>Try for free</button></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -189,7 +196,7 @@ const Home = () => {
 
                             <p>A comprehensive sites dashboard provides an organizational <br /> overview, displaying monthly expense reports and task progress for each site under management.</p>
                                 <div className="main-input">
-                                <button>Sign Up Now</button>
+                                <Link to="/contact" onClick={toggleMenu}><button>Sign Up Now</button></Link>
                                 </div>
 
                             </div>

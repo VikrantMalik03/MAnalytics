@@ -53,7 +53,7 @@ const About_Us = () => {
 
           </div>
           <div className='about-right'>
-            <img src="/gettyimages-1464561980-612x612.jpg" alt=".." />
+            <img src="/3d.png" alt=".." />
           </div>
         </div>
 
