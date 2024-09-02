@@ -1,53 +1,43 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import About_Us from './About_Us';
-import Pricing from './Pricing';
-import Home from './Home';
-import Footer from './Footer';
+import React from 'react';
+import './contact.css'; // Import the CSS file
 import Header from './Header';
+import Footer from './Footer';
+
 const Contact = () => {
     return (
         <>
-           <Header/>
-            <section>
-                <div className='contact-page'>
-                    <div>
-                        <img src="/signup.gif" alt="" />
+            <Header />
+            <section className='contact-section'>
+                <div className='contact-container'>
+                    <div className='contact-image'>
+                        <img src="/signup.gif" alt="Get in Touch" />
                     </div>
-                    <div className='form'>
-                        <div className='gen-info'>
-                            <div className='gen-heading'>
-                                <h3>Contact Us to Sign Up to Get Started</h3>
+                    <div className='contact-form-wrapper'>
+                        <h2 className='contact-title'>We’d Love to Hear From You</h2>
+                        <p className='contact-description'>
+                            Whether you have a question,feel free to contact us
+                        </p>
+                        <form className='contact-form'>
+                            <div className='input-group'>
+                                <input type="text" id="name" required />
+                                <label htmlFor="name">Full Name</label>
                             </div>
-                            <div className='gen-para'>
-                                <p>Explore the future with <br /> Feel free to get in touch.</p>
+                            <div className='input-group'>
+                                <input type="email" id="email" required />
+                                <label htmlFor="email">Email Address</label>
                             </div>
-                        </div>
-                        <div className='input-area'>
-                            <label htmlFor="">Name</label>
-                            <textarea >Full Name</textarea>
-                        </div>
-
-                        <div className='input-area'>
-                            <label htmlFor="">E-mail</label>
-                            <textarea >Email Address</textarea>
-                        </div>
-
-                        <div className='input-area'>
-                            <label htmlFor="">Message</label>
-                            <textarea >How can we get better?</textarea>
-                        </div>
-
-                        <button>Send Message</button>
-
+                            <div className='input-group'>
+                                <textarea id="message" required></textarea>
+                                <label htmlFor="message">Your Message</label>
+                            </div>
+                            <button type="submit" className='submit-btn'>Send Message</button>
+                        </form>
                     </div>
-
                 </div>
             </section>
-
-            <Footer/>
+            <Footer />
         </>
-    )
+    );
 }
 
 export default Contact;

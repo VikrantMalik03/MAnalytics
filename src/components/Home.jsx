@@ -4,6 +4,7 @@ import Footer from './Footer';
 import Header from './Header';
 import ImageSlider from '../ImageSlider';
 import { Link } from 'react-router-dom';
+import { FadeIn } from './FadeIn';
 
 
 
@@ -15,7 +16,7 @@ const Home = () => {
         { url: "/dash1.png", title: "beach" },
         { url: "/dash2.png", title: "beach" },
         { url: "/dash3.png", title: "beach" },
-        
+
 
     ];
     const containerStyles = {
@@ -47,7 +48,7 @@ const Home = () => {
 
     const getResponsiveStyles = () => {
         const screenWidth = window.innerWidth;
-    
+
         if (screenWidth <= 768) { // Tablet and below
             return {
                 width: "90%", // Adjust the width to be responsive
@@ -81,60 +82,66 @@ const Home = () => {
         <>
             <Header />
             <main>
-                <section>
-                    <div className="home-main">
-                        <div className="home-left">
-                            <p  className="info">
-                            M3 Analytics: Empowering Civil Site Efficiency through Seamless Integration of
-                                <div>
-                                    <Typewriter
-                                        options={{
-                                            strings: ['Materials', 'Measurement', 'Man-Power'],
-                                            autoStart: true,
-                                            loop: true,
-                                            cursor: '|',
-                                            cursorClassName: 'custom-cursor', // Custom cursor class
-                                            delay: 100,
-                                            deleteSpeed: 50,
-                                        }}
-                                    />
-                                </div>
-                            </p>
-                        </div>
-                        <div>
-                            <img className="gif" src="/suu.gif" alt="img" />
-                        </div>
-                    </div>
-                    <div className="home-down">
-                        <p>Trusted by Individuals and teams at the World's best Companies.</p>
-                        <div className='logos'>
-                            <img className="logo" src="./logo.svg" alt="Digital Fortress" />
-                            <img className="logo" src="./ref_logo.png" alt="velvizi" />
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <div className="home-2card">
-                        <div className="card-wrapper">
-                            <div className="box1">
-                                <div className="box-container">
+                <FadeIn>
+                    <section>
+                        <div className="home-main">
+                            <div className="home-left">
+                                <p className="info">
+                                    M3 Analytics: Empowering Civil Site Efficiency through Seamless Integration of
                                     <div>
-                                        <h2>Purchase Order System</h2>
-                                        <p>A real-time purchase order system allows for colloborative input, tracking deliveries, and managing payments, with automatic status updates based on delivery quantities.</p>
-                                        <div className="main-input">
-                                            <Link to="/pricing" onClick={toggleMenu}><button>Try for free</button></Link>
+                                        <Typewriter
+                                            options={{
+                                                strings: ['Materials', 'Measurement', 'Man-Power'],
+                                                autoStart: true,
+                                                loop: true,
+                                                cursor: '|',
+                                                cursorClassName: 'custom-cursor', // Custom cursor class
+                                                delay: 100,
+                                                deleteSpeed: 50,
+                                            }}
+                                        />
+                                    </div>
+                                </p>
+                            </div>
+                            <div>
+                                <img className="gif" src="/suu.gif" alt="img" />
+                            </div>
+                        </div>
+                        <div className="home-down">
+                            <p>Trusted by Individuals and teams at the World's best Companies.</p>
+                            <div className='logos'>
+                                <img className="logo" src="./logo.svg" alt="Digital Fortress" />
+                                <img className="logo" src="./ref_logo.png" alt="velvizi" />
+                            </div>
+                        </div>
+                    </section>
+                </FadeIn>
+
+                <FadeIn>
+                    <section>
+                        <div className="home-2card">
+                            <div className="card-wrapper">
+                                <div className="box1">
+                                    <div className="box-container">
+                                        <div>
+                                            <h2>Purchase Order System</h2>
+                                            <p>A real-time purchase order system allows for colloborative input, tracking deliveries, and managing payments, with automatic status updates based on delivery quantities.</p>
+                                            <div className="main-input">
+                                                <Link to="/pricing" onClick={toggleMenu}><button>Try for free</button></Link>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img className="image2" src="/allu.png" alt="Example Image" />
                                         </div>
                                     </div>
-                                    <div>
-                                        <img className="image2" src="/allu.png" alt="Example Image" />
-                                    </div>
                                 </div>
+                                <div className="shadow-card"></div>
                             </div>
-                            <div className="shadow-card"></div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </FadeIn>
 
+                <FadeIn>
                     <div className="home3">
                         <div >
                             <img className="image3" src="/hero.png" alt="colour" />
@@ -145,71 +152,81 @@ const Home = () => {
                             </div>
                             <div className='info2'>Stream line your project with our cutting edge web&app solutions<br /> with integrated progress tracking at all levels.</div>
                             <div className="main-input">
-                            <Link to="/pricing" onClick={toggleMenu}><button>Try Now</button></Link>
+                                <Link to="/pricing" onClick={toggleMenu}><button>Try Now</button></Link>
                             </div>
 
                         </div>
                     </div>
-                                        
-                    <div className="home-vendor">
-                        <div className="div-container2">
-                            {/* <div>COST SAVER</div> */}
-                            <div className='home3-left'>
-                                <h2>Vendors</h2>
+                </FadeIn>
 
-                                <p>Vendors  are categorised as purchase-only , labour-only contractors or combined labour and material contractors, with task trackin implemented for contractor workers.</p>
-                                
-                            </div>
+
+                <FadeIn>
+                <div className="home-vendor">
+                    <div className="div-container2">
+                        {/* <div>COST SAVER</div> */}
+                        <div className='home3-left'>
+                            <h2>Vendors</h2>
+
+                            <p>Vendors  are categorised as purchase-only , labour-only contractors or combined labour and material contractors, with task trackin implemented for contractor workers.</p>
 
                         </div>
-                        <div className='Vendorslides'>
-                            <div style={containerstyy}>
-                                <ImageSlider slides={vendors} />
-                            </div>
+
+                    </div>
+                    <div className='Vendorslides'>
+                        <div style={containerstyy}>
+                            <ImageSlider slides={vendors} />
                         </div>
                     </div>
+                </div>
+                </FadeIn>
 
-                    <div className="home-2card">
-                        <div className="card-wrapper">
-                            <div className="box1">
-                                <div className="box-container">
-                                    <div>
-                                        <img className="image2" src="./bhai.png" alt="Example Image" />
-                                    </div>
-                                    <div>
-                                        <h2>Introducing <br /> Expense Track</h2>
-                                        <p>An expense page tracks non-PO site costs, categorizing them as labor vendor, in-house, and purchase/rent expenses, with weekly in-house expense reports available.</p>
-                                        <div className="main-input">
+                <FadeIn>
+
+                <div className="home-2card">
+                    <div className="card-wrapper">
+                        <div className="box1">
+                            <div className="box-container">
+                                <div>
+                                    <img className="image2" src="./bhai.png" alt="Example Image" />
+                                </div>
+                                <div>
+                                    <h2>Introducing <br /> Expense Track</h2>
+                                    <p>An expense page tracks non-PO site costs, categorizing them as labor vendor, in-house, and purchase/rent expenses, with weekly in-house expense reports available.</p>
+                                    <div className="main-input">
                                         <Link to="/pricing" onClick={toggleMenu}><button>Try for free</button></Link>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="shadow-card"></div>
                         </div>
+                        <div className="shadow-card"></div>
                     </div>
-                    <div className="home3">
-                        <div className="div-container2">
-                           
-                            <div className='home4-left'>
+                </div>
+                </FadeIn>
+
+                <FadeIn>
+                <div className="home3">
+                    <div className="div-container2">
+
+                        <div className='home4-left'>
                             <h2>Get Started With M3 Analytics  Dashboard</h2>
 
                             <p>A comprehensive sites dashboard provides an organizational <br /> overview, displaying monthly expense reports and task progress for each site under management.</p>
-                                <div className="main-input">
+                            <div className="main-input">
                                 <Link to="/contact" onClick={toggleMenu}><button>Sign Up Now</button></Link>
-                                </div>
-
                             </div>
 
                         </div>
-                        <div className='Vendorslides'>
+
+                    </div>
+                    <div className='Vendorslides'>
                         <div style={containerStyles}>
-                                            <ImageSlider slides={slides} />
-                                        </div>
+                            <ImageSlider slides={slides} />
                         </div>
                     </div>
+                </div>
+                </FadeIn>
 
-                
+
             </main>
 
 

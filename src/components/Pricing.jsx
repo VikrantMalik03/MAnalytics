@@ -3,6 +3,7 @@ import Footer from './Footer';
 import Header from './Header';
 import './style.css'; // Adjust the path as needed
 import { Link } from 'react-router-dom';
+import { FadeIn } from './FadeIn';
 
 const Pricing = () => {
 
@@ -47,8 +48,7 @@ const Pricing = () => {
     return (
         <>
             <Header/>
-
-            <section>
+            <FadeIn>
                 <div className="pricing-cards">
                     <div className="card basic">
                         <h3>Basic</h3>
@@ -60,7 +60,7 @@ const Pricing = () => {
                         <h3>Basic +</h3>
                         <p className="price">&#8377;99/month</p>
                         <p className="description">For individuals and small teams</p>
-                        <button className="get-started-btn">Get Started with Basic</button>
+                        <button className="get-started-btn">Get Started with Basic +</button>
                     </div>
                     <div className="card pro">
                         <h3>Pro +</h3>
@@ -76,9 +76,10 @@ const Pricing = () => {
                         <button className="get-started-btn">Get Started with Business</button>
                     </div>
                 </div>
-            </section>
+                </FadeIn>
 
             <section>
+                <FadeIn>
 
                 <div className='heading'>
                     <p>Compare Features</p>
@@ -133,10 +134,11 @@ const Pricing = () => {
 
                 </div>
 
-
+                </FadeIn>
             </section>
 
             <section>
+                <FadeIn>
                 <div className="faq-container">
                     <h2>Frequently asked questions</h2>
                     <div className="faq-accordion">
@@ -157,10 +159,12 @@ const Pricing = () => {
                         ))}
                     </div>
                 </div>
+                </FadeIn>
             </section>
 
 
             <section>
+                <FadeIn>
                 <div className="home-2card">
                     <div className="card-wrapper">
                         <div className="box1">
@@ -180,6 +184,8 @@ const Pricing = () => {
                         <div className="shadow-card"></div>
                     </div>
                 </div>
+            
+            </FadeIn>
             </section>
 
            <Footer/>
